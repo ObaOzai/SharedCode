@@ -1,0 +1,566 @@
+
+<!-- ######################################### -->
+<!-- Code by Juan D. Correa -  Rev. March 2025 -->
+<!-- ######################################### -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AstroPema</title>
+    <link rel="icon" href="/static/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--   Style Section -->
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .centered-nav {
+        justify-content: center;
+    }
+
+    body {
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    background-image: url("Gem_bg.png"); /* Replace with correct filename */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    }
+
+    .sticky-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #333;
+    }
+
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px 5px; /* reduced padding */
+    }
+
+    header h2 {
+        font-size: 1.4em;
+        margin: 5px 0;
+    }
+
+    header h5 {
+        font-size: 1em;
+        margin: 2px 0;
+    }
+
+    header h6 {
+        font-size: 0.85em;
+        margin: 2px 0;
+    }
+
+    .topnav {
+        background-color: #444;
+        overflow-x: auto;
+        white-space: nowrap;
+        display: flex;
+        padding: 0 5px;
+    }
+
+    .topnav a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 10px 12px;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .topnav a:hover {
+        background-color: #666;
+    }
+
+    .content {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    article {
+        background: white;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    video {
+        width: 75%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 0.8em;
+        color: #666;
+        margin: 20px 0;
+    }
+
+    @media (max-width: 600px) {
+        .topnav a {
+            font-size: 13px;
+            padding: 8px 10px;
+        }
+
+        article h3 {
+            font-size: 0.9em;
+        }
+
+        header h2 {
+            font-size: 1.2em;
+        }
+
+        header h5, header h6 {
+            font-size: 0.8em;
+        }
+
+        video {
+            width: 100%;
+        }
+    }
+</style>
+
+
+
+
+
+<!--   End Style -->
+
+
+
+</head>
+
+<body>
+
+
+
+
+<div class="sticky-wrapper">
+    <header>
+    <h5>Juan D. Correa - Software Developer/Linux System Administration</h5>
+    <h6>oba@astropema.com</h6>
+    </header>
+    <div class="topnav centered-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="code.html">Code</a>
+    </div>
+</div>
+
+
+
+<!--  Intro -->
+
+
+<style>
+.intro-box {
+  max-width: 900px;
+  margin: 3em auto 1.5em auto;
+  padding: .5em;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  color: #000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  text-align: center;
+}
+.intro-box h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+</style>
+
+<div class="intro-box">
+  <h2>Current Projects</h2>
+  <p>Below are active creative and technical projects that merge systems thinking, AI research, symbolic language, and practical Linux system administration.</p>
+  <p>
+This (Linux) server is experimentally hosted from a private home network.
+
+At times, the server may be temporarily offline due systems upgrades, power outages or telecommunications interruptions.
+
+Thank you for your understanding!
+</p>
+
+</div>
+
+
+
+<!-- End Intro -->
+
+
+
+<!--  Projects -->
+
+<style>
+article.project {
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+article.project h2 {
+  font-size: 1.6em;
+  margin-top: 0;
+}
+article.project p {
+  margin-bottom: 1em;
+}
+article.project code {
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+</style>
+
+<article class="project">
+  <h2>Astro Pema</h2>
+  <p><strong>Overview:</strong> Astro Pema is a mythopoetic machine intelligence project that reimagines astrology as a symbolic language for 
+      exploring consciousness. It combines traditional astrological logic, planetary pattern databases, 
+     and vector representations with modern SLM/LLM-based narrative synthesis.</p>
+
+  <p><strong>System Goals:</strong> The goal isn’t to reproduce astrology but to use it as a structure to generate symbolic prompts, reflect mythic intelligence, and explore emergent semantic space through language models.</p>
+
+  <p><strong>Core Components:</strong></p>
+  <ul>
+    <li><strong>PostgreSQL database</strong> (<code>astropema</code>) stores over 3000 curated planetary aspect interpretations.</li>
+    <li><strong>Custom Python scripts</strong> handle birth chart parsing, JSON formatting, and prompt generation for language models.</li>
+    <li><strong>GGUF-compatible SLMs</strong> such as <code>mistral-7b-instruct</code> and <code>mythomax</code> produce structured symbolic narratives.</li>
+    <li><strong>Web interface (in progress)</strong> to let users generate their own charts and a receive mithopoetic readings based on the natal chart 
+         synthesis of its own mythical meanings. Each chart is unique to the individual, because each planetary combination of keys is unique to each individual (when time of 
+         birth is included).</li>
+  </ul>
+
+  <p><strong>Tech Stack:</strong></p>
+  <ul>
+    <li>Python (LLM logic, JSON processing)</li>
+    <li>PostgreSQL (chart + interpretation database)</li>
+    <li>Bash & SSH (local server management across 4 Linux boxes)</li>
+    <li>Frontend: HTML/CSS, future use of Flask or PHP-based UI</li>
+  </ul>
+
+  <p><strong>Hardware:</strong> Astro Pema runs on a cluster of repurposed laptops and desktops:
+    <ul>
+      <li><code>roca</code> – main execution node (Linux, no GPU)</li>
+      <li><code>oba</code> – SLM host with optimized GGUF models</li>
+      <li><code>pema</code>, <code>coyote</code> – storage, backup, and database servers</li>
+    </ul>
+  </p>
+
+
+ 
+ <div>
+      <li><strong>Astro Pema's Mythopoetic Interpretation of Frida Kahlo’s Birth Data</strong></li> 
+      <iframe src="FridaK.pdf" width="100%" height="800px" style="border: none;"></iframe></div>
+      <center><a href="FridaK.pdf"> PDF Link</a></center> 
+
+<br>
+
+<center>
+<a href="https://www.astropema.ai/mythos/" style="display: inline-block; padding: 10px 18px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 6px; margin-t">
+  Generate your Chart</a>
+
+</p>
+
+<a href="https://www.linkedin.com/in/obaozai" style="display: inline-block; padding: 10px 18px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px;">
+  Visit my LinkedIn
+</a>
+
+<a href="https://github.com/ObaOzai" style="display: inline-block; padding: 10px 18px; background-color: #333; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px;">
+  Visit my GitHub
+</a>
+</center>
+</article>
+
+
+
+
+
+<style>
+.project-box {
+  max-width: 1000px;
+  margin: 2em auto;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+.project-box h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.4em;
+}
+.project-box h3 {
+  margin-top: 1.5em;
+  font-size: 1.3em;
+  color: #333;
+}
+</style>
+
+<article class="project-box">
+  <h2>Atari Deep Reinforcement Learning Project</h2>
+
+
+   <div style="text-align: center; background-color: rgba(240, 240, 240, 0.1); padding: 15px; border-radius: 12px;">
+        <video class="responsive-video" width="500" height="200" controls>
+            <source src="lunar_lander_simulation_fixed.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h5>Atari Lunar Lander Demo</h5>
+    </div>
+
+
+  <p><strong>Project Scope:</strong>  
+  This project explores deep reinforcement learning by training an AI agent to master classic Atari 2600 games—specifically, Breakout—using the Arcade 
+ Learning Environment (ALE) and the DQN, PPO and A2C  architectures implemented through Stable-Baselines3. The primary objective is to train a model 
+ from scratch on local hardware using custom Python code, visual feedback via TensorBoard, and video capture of agent behavior across training milestones.</p>
+
+ <h2>Why Atari Still Matters in AI</h2>
+
+  <p>
+    The path from video games to advanced artificial intelligence might sound like science fiction, but it's real—and it starts with Atari.
+  </p>
+
+  <p>
+    In 2013, DeepMind’s groundbreaking work showed that a single deep neural network could learn to play dozens of Atari 2600 games using only raw pixel input and reward signals. The algorithm, known as Deep Q-Network (DQN), didn’t need hand-crafted features or pre-programmed strategies—it learned by playing.
+  </p>
+
+  <p>
+    Atari games provided the perfect training ground: standardized environments, deterministic rules, visual complexity, and delayed rewards. Mastering them was a critical milestone in proving that deep reinforcement learning could handle real-world-like complexity.
+  </p>
+
+  <p>
+    The same core ideas—trial-and-error learning, value estimation, policy optimization—are now used in training robotics, self-driving cars, conversational agents, and autonomous drones. Even today, many research labs still benchmark algorithms against the Atari Learning Environment (ALE).
+  </p>
+
+  <p>
+    In that sense, beating Breakout isn’t just retro fun—it’s a rite of passage for AI agents. And for human developers, it’s an elegant way to understand how learning, memory, and decision-making can emerge from feedback and experience.
+  </p>
+
+  <h3>Technical Stack</h3>
+  <ul>
+    <li><strong>Framework:</strong> PyTorch + Stable-Baselines3</li>
+    <li><strong>Environment:</strong> Gymnasium with ALE + custom ROM handling</li>
+    <li><strong>Model:</strong> DQN with CNN policy, experience replay, exploration decay</li>
+    <li><strong>Tooling:</strong> TensorBoard, imageio for video, cron-based job scheduling</li>
+    <li><strong>Hardware:</strong> Local CPU-based Linux machine (no GPU), Ubuntu 24.04, 16 GB RAM</li>
+  </ul>
+
+
+  <h3>Goals</h3>
+  <ul>
+    <li>Achieve consistent episode rewards >30 in Breakout</li>
+    <li>Learn to interpret TensorBoard metrics to inform architecture and hyperparameter tuning</li>
+    <li>Develop a full feedback loop: train → evaluate → adjust → retrain</li>
+    <li>Build resilience through CPU-only training and memory constraints</li>
+    <li>Establish reproducible results through versioned models and logs</li>
+  </ul>
+
+  <h3>Challenges</h3>
+  <p>Given the lack of GPU acceleration, the agent is trained slowly—roughly 2 million timesteps per 24 hours. Replay buffers and checkpoints must be carefully managed to avoid memory saturation. Careful use of logging and rendering ensures progress can be tracked even without real-time monitoring.</p>
+
+  <h3>Next Steps</h3>
+  <ul>
+    <li>Compare DQN with PPO and A2C on the same game</li>
+    <li>Run visual evaluations across different checkpoint stages</li>
+    <li>Eventually test on GPU hardware to compare acceleration gains</li>
+    <li>Publish a live training log via web interface and integrate result video playback</li>
+  </ul>
+
+  <h3>Why It Matters</h3>
+  <p>This project is both a technical testbed and a philosophical experiment in developing autonomous agents using minimal resources. It demonstrates what’s possible through determination, iterative design, and disciplined system administration—without relying on cloud APIs or commercial platforms. The learned behaviors of this AI agent represent a bridge between game mechanics and emerging intelligence.</p>
+
+<h3>Status & Next Steps</h3>
+<p><strong>Breakout Project</strong> – For updates and announcements, follow me on LinkedIn:</p>
+
+<a href="https://www.linkedin.com/in/obaozai" style="display: inline-block; padding: 10px 18px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px;">
+  Visit my LinkedIn
+</a>
+<a href="https://github.com/ObaOzai" style="display: inline-block; padding: 10px 18px; background-color: #333; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px;">
+  Visit my GitHub
+</a>
+
+</article>
+
+
+
+<article class="project-box">
+  <h2>LLM-SLM-Assisted Knowledge Database (PlantDB)</h2>
+
+  <p><strong>Project Scope:</strong>  
+  This ongoing project explores the use of local small language models (SLMs) and larger hosted LLMs to generate, structure, and insert scientifically meaningful data into a custom PostgreSQL database. Our focus has been on medicinal plant knowledge from the Veracruz region in Mexico—leveraging generative models to synthesize structured information from minimal prompts (e.g., Latin names).</p>
+
+  <h3>Pipeline Architecture</h3>
+  <ul>
+    <li><strong>Language Models:</strong> 
+      <ul>
+        <li>SLM: <code>mistral-7b-instruct-v0.2.Q5_K_M.gguf</code> via <code>llama.cpp</code></li>
+        <li>LLM fallback: Gemini or OpenAI GPT-4 via web interface or scripted offline fallback</li>
+      </ul>
+    </li>
+    <li><strong>Runtime:</strong> Python script running locally via <code>llama_cpp</code> bindings (quantized models)</li>
+    <li><strong>Prompt Template:</strong> Custom per-plant template querying Latin name for region, uses, compounds, preparations</li>
+    <li><strong>Timing:</strong> Each entry takes 90–150 seconds depending on model and prompt complexity</li>
+    <li><strong>Data Format:</strong> Output parsed and stored as structured PostgreSQL rows with raw output saved</li>
+  </ul>
+
+  <h3>Database Schema</h3>
+  <p>PostgreSQL table <code>medicinal_plants</code> contains the following fields:</p>
+  <ul>
+    <li><strong>latin_name</strong></li>
+    <li><strong>common_name</strong></li>
+    <li><strong>region</strong></li>
+    <li><strong>medicinal_use</strong></li>
+    <li><strong>preparation</strong></li>
+    <li><strong>compounds</strong></li>
+    <li><strong>source</strong> (e.g., model version)</li>
+    <li><strong>raw_output</strong> (original model text)</li>
+    <li><strong>prompt</strong></li>
+    <li><strong>model_version</strong></li>
+  </ul>
+
+  <h3>Process Summary</h3>
+  <p>Plant names (Latin binomials) are read from a text file and processed one by one. The prompt is dynamically generated, sent to the SLM, and the output is parsed and logged (both to screen and a versioned log file). PostgreSQL insertion is handled via <code>psycopg2</code>. A total time tracker is recorded per run for benchmarking across models.</p>
+
+  <h3>Hardware</h3>
+  <ul>
+    <li><strong>Model host:</strong> Local Ubuntu 24.04 box running llama.cpp with 16 GB RAM</li>
+    <li><strong>Database:</strong> PostgreSQL 16, hosted on the same system</li>
+    <li><strong>SLM performance:</strong> ~2 minutes per query with Q5_K_M quantization</li>
+  </ul>
+
+  <h3>Usage Philosophy</h3>
+  <p>Rather than "extract" data, the models are tasked with synthesizing culturally rooted, biologically informed summaries. This combines computational creativity with traditional knowledge systems—respectfully and with attribution to the model as source. This work also aims to explore the role of language models in digital ethnobotany and modern herbology.</p>
+
+
+<h3>Status & Next Steps</h3>
+<p>We're live testing operations at <strong>Astropema PlantDB</strong>, though still actively polishing and refining the system.</p>
+
+<ul style="margin-top: 20px;">
+  <li>Add support for batch insertion skipping duplicates</li>
+  <li>Automate extraction of structured fields (e.g., common name, chemical constituents)</li>
+  <li>Build a front-end interface for real-time query, search, and display</li>
+  <li>Evaluate GPT-generated entries against verified botanical sources</li>
+  <li>Train a smaller fine-tuned model on the dataset created from this work</li>
+</ul>
+
+
+
+  <h3>Broader Application</h3>
+  <p>This method of SLM-assisted database generation can be adapted to other domains: traditional medicine, local biodiversity indexing, cultural archives, or knowledge capture from oral history. It demonstrates the ability of small models to structure domain knowledge on local hardware—democratizing access to AI-enhanced research tools.</p>
+
+
+<center>
+
+<a href="https://astropema.com/plantdb" style="display: inline-block; padding: 10px 18px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; margin-right: 10px;">
+  Visit the Plant Database
+</a>
+
+
+</center>
+
+
+</article>
+
+
+
+<article class="project-box">
+  <h2>Personal Portfolio and Research Hub</h2>
+
+  <p><strong>Project Scope:</strong>
+  This website is an evolving project—serving both as a digital portfolio and as a testing ground for design, data presentation, and backend interfacing. It is intended to showcase current technical projects, long-term research, and personal creative experiments across disciplines.</p>
+
+  <h3>Technical Stack</h3>
+  <ul>
+    <li><strong>Frontend:</strong> HTML5, CSS3, embedded PDFs, video, and iframes</li>
+    <li><strong>Backend (planned):</strong> PHP for PostgreSQL interfacing</li>
+    <li><strong>Styling:</strong> Minimalist CSS with semi-transparent elements to support content readability over a dark background image</li>
+    <li><strong>Hosting:</strong> Self-hosted on a Linux server using Apache2</li>
+    <li><strong>Content Type:</strong> Static project previews, notebooks, PDF reports, embedded simulations, and AI-generated visualizations</li>
+  </ul>
+
+  <h3>Design Philosophy</h3>
+  <p>
+    The visual design prioritizes clarity and creative flow. Background imagery and minimal shadows give each section depth, while semi-transparent containers ensure text readability without sacrificing aesthetics. The site is built to evolve incrementally—each new project gets integrated live, as it matures.
+  </p>
+
+  <h3>Goals</h3>
+  <ul>
+    <li>Showcase a wide range of work from ML, DL, simulations, and system architecture</li>
+    <li>Document research and learning with linked notebooks and media</li>
+    <li>Create a foundation for more dynamic web-based tools (e.g. chart generators, plant DB search)</li>
+    <li>Maintain low dependencies and full local control over deployment</li>
+  </ul>
+
+  <h3>Challenges</h3>
+  <p>
+    Because the site is hand-built without frameworks, each visual and layout change requires precision. Ensuring full browser compatibility and fast load times while embedding heavier assets (like videos and notebooks) adds complexity.
+  </p>
+
+  <h3>Next Steps</h3>
+  <ul>
+    <li>Integrate a PHP-based query system to interface with the medicinal plant PostgreSQL DB</li>
+    <li>Develop a simple backend for users to generate custom astrological reports from natal chart data</li>
+    <li>Refine mobile responsiveness and explore light/dark mode toggles</li>
+    <li>Eventually containerize for portable deployment and possible remote backups</li>
+  </ul>
+
+<center>
+
+
+<a href="https://www.linkedin.com/in/obaozai" style="display: inline-block; padding: 10px 18px; background-color: #2c3e50; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px; margin-right: 10px;">
+  Visit my LinkedIn
+</a>
+
+<a href="https://github.com/ObaOzai" style="display: inline-block; padding: 10px 18px; background-color: #333; color: white; text-decoration: none; border-radius: 6px; margin-top: 10px;">
+  Visit my GitHub
+</a>
+
+</center>
+
+
+</article>
+
+
+<!-- End Projecets -->
+
+
+
+
+
+<div class="w3-container w3-teal">
+<footer>
+ <center><h3>March &copy; 2025</center></h3>
+</footer>
+</div>
+
+
+</body>
+</html>
